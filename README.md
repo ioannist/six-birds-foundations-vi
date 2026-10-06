@@ -8,34 +8,29 @@ vendored Foundations dependencies.
 ## Paper
 
 - **Six Birds Foundations VI: A Catalog of Dynamical Structural Laws**,
-  Preprint v2.0, 27 September 2026: `paper/main.pdf` with its supplement
+  Preprint v2.0, 6 October 2026: `paper/main.pdf` with its supplement
   `paper/supplement.pdf`.
+  DOI (v2.0): [10.5281/zenodo.23187024](https://doi.org/10.5281/zenodo.23187024);
   DOI (all versions): [10.5281/zenodo.22254288](https://doi.org/10.5281/zenodo.22254288);
   v1.0 (2 September 2026): [10.5281/zenodo.22254289](https://doi.org/10.5281/zenodo.22254289)
 
-The Six Birds corpus through Foundations IV certifies *states*: each of its
-laws fixes a single map, quotient, package, or declared finite family and
-proves a static classification about it. Nothing in that corpus certifies
-*runs*. This paper is the catalog of exactly those laws: thirteen dynamical
-structural laws (G1–G13) in four clusters, each stated in the six-part normal
-form inherited from Foundations IV and each carrying an unbounded quantifier
-that no static row possesses.
+A static structural law classifies fixed data. Many questions about dynamics
+concern runs instead: whether every orbit eventually descends, whether a run
+terminates while its presentation changes, whether a cover must move with its
+target. The paper states thirteen candidate laws of this kind, G1–G13, in the
+Six Birds emergence calculus, and sorts them by what is proved. Seven are laws,
+each with a concrete system in which the difficult hypothesis is proved (for
+G13 only a small arithmetic example): G3, G4, G5, G8, G10, G12 and G13. Two
+are general theorems with imported classical instances: G2 and G7. Four are
+templates, whose implication is proved while the difficult hypothesis remains
+an open obligation: G1, G6, G9 and G11.
 
-The laws were mined from eccentric mathematical problems — Collatz, Goodstein,
-Egyptian fractions, reverse-and-add, Recamán, the angel problem, sandpiles,
-rule 184, Ducci, aperiodic tilings, Hadwiger–Nelson, Apollonian packings —
-treated as theorem detectors. Each law is layer-agnostic: it quantifies over
-declared abstract data — carriers, quotients, ledgers, patch systems — in the
-Six Birds emergence calculus, so any substrate supplying the data inherits the
-classification. The paper solves no open problem and claims none: Collatz,
-Erdős–Straus, Lychrel, Recamán, the Langton's-ant highway, Gilbreath, and the
-exact chromatic number of the plane all remain open, and each law's nonclaims
-say so explicitly.
-
-Every theorem, schema, no-go and countermodel carries a provenance line
-directly after its statement, distinguishing recovered standard mathematics,
-recovered Six Birds results, elementary facts, and this paper's own sharpened
-contributions. Nothing in the paper is labelled new.
+The concrete results are checked in Lean: the exact affine ledger of the
+accelerated Collatz map and its split pairs at every depth, the orbit of 22
+under binary reverse-and-add, nilpotence of the Ducci map on binary vectors of
+length 2^k, and order independence for move systems whose distinct legal moves
+commute. Classical results are imported with attribution, nothing is labelled
+new, and the Collatz, Erdős–Straus, Lychrel and Recamán problems remain open.
 
 ## What This Repository Provides
 
@@ -53,16 +48,19 @@ contributions. Nothing in the paper is labelled new.
   external anchors, source deviations, and kernel-axiom receipts.
 - Vendored Six Birds Foundations dependencies under `lean/vendor/foundations/`.
 
-Appendix A of the paper records, clause by clause, which parts of each printed
-statement the Lean covers and which are proved or imported in prose only.
+The last column of the paper's catalog table, Section 8, and the supplement's
+source concordance and formal status record which parts of each printed
+statement the Lean covers and which are argued on paper or imported.
 
 ## Build and Verify
 
-Build the manuscript (also emits a flattened source at
-`paper/build/main_flat.tex`):
+Build the manuscript and its supplement (also emits flattened sources at
+`paper/build/main_flat.tex` and `paper/build/supplement_flat.tex`); each
+document is built again so that its references into the other resolve:
 
 ```bash
-cd paper && latexmk -pdf main.tex
+cd paper && latexmk -pdf main.tex && latexmk -pdf supplement.tex \
+  && latexmk -g -pdf main.tex && latexmk -g -pdf supplement.tex
 ```
 
 Build the Lean project:

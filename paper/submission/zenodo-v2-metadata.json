@@ -1,0 +1,247 @@
+{
+  "title": "Six Birds Foundations VI: A Catalog of Dynamical Structural Laws",
+  "description": "<p>A static structural law classifies fixed data. Many questions about dynamics concern runs instead: whether every orbit eventually descends, whether a run terminates while its presentation changes, whether a cover must move with its target. This paper states thirteen candidate laws of this kind, G1–G13, and sorts them by what is proved. Seven are laws, each with a concrete system in which the difficult hypothesis is proved (for G13 only a small arithmetic example): amortized potential (G3), moving-cover exhaustion (G4), carry-horizon confinement (G5), odometer abelianization (G8), lossful boundary persistence (G10), finite witness radiation (G12) and thin-orbit saturation (G13). Two are general theorems with imported classical instances: transfinite escrow (G2) and adversarial mobility confinement (G7). Four are templates, whose implication is proved while the difficult hypothesis remains an open obligation (G1, G6, G9, G11). Lean coverage is reported separately.</p>\n\n<p>The concrete results are all checked in Lean 4. For the accelerated Collatz map every orbit satisfies an exact affine ledger, and at every depth m two starting values agree modulo 2<sup>m</sup> but have different next division exponents, so no fixed residue class predicts the ledger. Under binary reverse-and-add, the orbit of 22 enters a four-phase family and never reaches a palindrome. The Ducci map on binary vectors of length 2<sup>k</sup> is nilpotent. For move systems whose distinct legal moves commute, started where no infinite legal run exists, any two legal runs that end in stable states end in the same state with the same firing counts.</p>\n\n<p>Classical results are imported with attribution, nothing is labelled new, and the Collatz, Erdős–Straus, Lychrel and Recamán problems remain open.</p>\n\n<p>The supplement is a separate file. It gives the source concordance (item, entry, Lean declaration), the case analyses and instances, the non-implications, the finite computations, where the laws come from, the formal status and axiom record, and replay instructions. The Lean 4 development and the exact-arithmetic laboratory are in the linked repository.</p>\n\n<p><strong>Version 2.</strong> The catalog is sorted by what is proved: laws with a proved instance, general theorems, and templates whose hard hypothesis is stated as an open obligation. Several version-1 theorem claims are restated at the strength the proofs support (among them G9 positive transport, G11 and the G12 biconditional), the Collatz ledger, the Collatz split pairs, the base-2 reverse-and-add family and the Ducci result are now checked in Lean, and case tables, instance lists, laboratory records and the axiom register move to the supplement.</p>",
+  "publication_date": "2026-10-06",
+  "version": "v2",
+  "keywords": [
+    "emergence calculus",
+    "dynamical structural law",
+    "liveness",
+    "template",
+    "Collatz affine ledger",
+    "split pair",
+    "reverse-and-add",
+    "Ducci map",
+    "abelian sandpile",
+    "odometer",
+    "Lean 4",
+    "Six Birds Theory"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.2307/2322189",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1017/fmp.2022.8",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1145/3158122",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/0304-3975(82)90026-3",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/BF01565428",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1145/359138.359142",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1137/0606031",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/BF00276493",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1145/876638.876643",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://oeis.org/A060382",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://www.mathpages.com/home/kmath004/kmath004.htm",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://www.fourmilab.ch/documents/threeyears/",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://oeis.org/A005132",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://oeis.org/A057167",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.1016/0012-365X(83)90160-7",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/0166-218X(84)90073-8",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1163/1568553042674662",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1103/PhysRevLett.64.1613",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/s10955-009-9899-6",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1109/TIT.2006.874516",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/j.tcs.2007.03.014",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1287/opre.4.1.42",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1080/10236190410001647807",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/s00208-023-02579-w",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1093/imanum/drab088",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1109/TPAMI.1986.4767851",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/BF01418780",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5070/C64163843",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5070/C64264241",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.19086/aic.18614",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1103/PhysRevLett.53.1951",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/0304-3975(76)90059-1",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1007/BF01534980",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1016/j.jctb.2004.08.001",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.1090/S0894-0347-2011-00707-8",
+      "relation": "cites",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.20713187",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.20713664",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.18365949",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.19061345",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.22248767",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.18926771",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.20713688",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.5281/zenodo.20713577",
+      "relation": "cites",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "10.1007/978-3-030-79876-5_37",
+      "relation": "cites",
+      "resource_type": "publication-conferencepaper"
+    },
+    {
+      "identifier": "10.1093/oso/9780198501275.003.0013",
+      "relation": "cites",
+      "resource_type": "publication-section"
+    }
+  ]
+}
