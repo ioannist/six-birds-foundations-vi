@@ -10,7 +10,7 @@ vendored Foundations dependencies.
 - **Six Birds Foundations VI: A Catalog of Dynamical Structural Laws**,
   Preprint v2.0, 6 October 2026: `paper/main.pdf` with its supplement
   `paper/supplement.pdf`.
-  DOI (v2.0): [10.5281/zenodo.23187024](https://doi.org/10.5281/zenodo.23187024);
+  DOI (v2.0): [10.5281/zenodo.23187548](https://doi.org/10.5281/zenodo.23187548);
   DOI (all versions): [10.5281/zenodo.22254288](https://doi.org/10.5281/zenodo.22254288);
   v1.0 (2 September 2026): [10.5281/zenodo.22254289](https://doi.org/10.5281/zenodo.22254289)
 
