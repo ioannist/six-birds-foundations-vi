@@ -1,0 +1,84 @@
+\section{General theorems}\label{sec:theorems}
+
+The two entries in this section are theorems whose hypotheses are ordinary data, checked system by
+system. Their classical instances rest on imported results.
+
+\subsection{G2: \lawGTwo}\label{sec:G2}
+
+\emph{Name.} The \emph{escrow} is a value, held in a well-founded order, that must fall at every
+step; its fall pays for termination. The presentation may change at every step, and the escrow is
+compared across the change.
+
+Let $x_0, x_1, \ldots$ be a run with $x_{k+1} = T_k(x_k)$ and terminal set $A$. At each step a
+\emph{presentation} $\pi_k : X \to P_k$ records how the state is written, and an \emph{escrow}
+$e_k : P_k \to W$ assigns it a value in a well-founded order $(W, <)$.
+
+\begin{theorem}[Transfinite escrow]\label{thm:G2}
+Assume $(W, <)$ is well-founded and
+\begin{itemize}
+  \item \textup{(H1)} whenever $x_k \notin A$,
+    $e_{k+1}\bigl(\pi_{k+1}(T_k(x_k))\bigr) < e_k\bigl(\pi_k(x_k)\bigr)$.
+\end{itemize}
+Then some $x_k$ lies in $A$.
+\end{theorem}
+
+\begin{proof}
+Otherwise the escrow values $e_k(\pi_k(x_k))$ would form an infinite strictly decreasing sequence in $W$.
+\end{proof}
+
+This is Floyd's ranking principle \citep{Floyd1967}. The condition compares the escrow before a
+step with the escrow after the step \emph{and} the change of presentation, checked as one
+transition. A decrease that holds only before or only after an unrecorded change of presentation
+does not discharge it.
+
+Goodstein sequences are the classical instance. In base $k$ the state $n$ is written in hereditary
+base $k$; one step rewrites it in base $k+1$ and subtracts $1$. Replacing every base symbol by
+$\omega$ gives an ordinal escrow below $\varepsilon_0$ that is unchanged by the rewriting and
+strictly decreased by the subtraction. From $4 = 2^2$, rewriting gives $3^3 = 27$ and subtracting
+gives $26 = 2\cdot 3^2 + 2 \cdot 3 + 2$: the number grows while the escrow drops from
+$\omega^\omega$ to $\omega^2 \cdot 2 + \omega \cdot 2 + 2$. Every Goodstein sequence therefore
+terminates \citep{Goodstein1944}, and by the theorem of \citet{KirbyParis1982} this cannot be proved
+in Peano arithmetic.
+
+\subsection{G7: \lawGSeven}\label{sec:G7}
+
+\emph{Name.} The angel's \emph{mobility} is set against the devil's power to \emph{confine} it.
+
+In the angel game on $\mathbb{Z}^2$ with the Chebyshev distance, an angel of power $p$ moves each turn
+to an undeleted square within distance $p$, and the devil then deletes at most $b$ squares. The angel
+wins if it can move forever. The theorem below concerns any game of this shape. A state consists of
+the angel's position and a visible obstruction record. At each turn the angel moves to a position
+that a legality predicate allows, and the devil then replaces the record by one that a second
+legality predicate allows. A strategy is a function of the current state. The angel is
+\emph{stuck} at a state with no legal move.
+
+\begin{theorem}[Escape and confinement certificates]\label{thm:G7}
+Fix a game of this shape.
+\begin{enumerate}
+  \item Let $\sigma_A$ be an angel strategy and $I$ a set of states
+    such that at every state in $I$ the move of $\sigma_A$ is legal and every legal devil reply to it
+    leads to a state in $I$. Let $\sigma_D$ be a devil strategy whose reply to every legal move is
+    legal. Then the play of $\sigma_A$ against $\sigma_D$ from any state in $I$ stays in $I$, and
+    the angel is never stuck.
+  \item Let $\sigma_D$ be a devil strategy and $r$ a
+    natural-number rank on states such that the reply of $\sigma_D$ to every legal angel move is
+    legal and strictly lowers $r$. Then against every angel strategy that makes a legal move
+    whenever one exists, the angel is stuck at some turn $n \le r(s_0)$, where $s_0$ is the
+    initial state.
+  \item No game has an angel strategy $\sigma_A$ with a set $I$ as in part~1, a devil strategy
+    $\sigma_D$ with a rank $r$ as in part~2, and a state in $I$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Parts 1 and 2 are inductions on turns, the second bounded by the rank. For part 3, play $\sigma_A$
+against $\sigma_D$ from a state in $I$: by part~1 the angel moves legally at every turn, and each
+reply lowers the rank, which cannot happen forever.
+\end{proof}
+
+The theorem checks certificates; it does not produce strategies. Without a state in $I$ part~3
+fails, since an empty set satisfies the hypothesis of part~1 vacuously. For the standard game with
+$b = 1$ the answer is known: the angel of power $1$ loses \citep{BerlekampConwayGuy1982,Conway1996},
+and an angel of power $2$ wins \citep{Mathe2007,Kloster2007}, with further proofs for power $4$ and
+high power \citep{Bowditch2007,Gacs2007}.
+

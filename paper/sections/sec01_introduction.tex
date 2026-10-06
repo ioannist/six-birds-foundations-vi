@@ -1,0 +1,127 @@
+\section{Introduction}\label{sec:intro}
+
+A structural law, in the sense this series gives the term, is a theorem about declared abstract
+data --- a carrier, a quotient, a ledger, a family of patches --- so that any system supplying the
+data inherits the conclusion. \FoundIV{} collected fifty-two such laws
+\citep{Tsiokos2026FoundIV}. Every one of them is about fixed data: one map, one pair of quotients,
+one declared finite family of patches. None quantifies over the steps of a run. Yet many of the
+questions that make dynamics hard are questions about runs. Does every orbit of a map eventually
+descend? Does a run terminate when the way its states are written down changes at every step?
+Can a family of targets be covered when no fixed finite package of patches suffices? What happens
+when the obstruction to progress is produced by the run's own history, or chosen by an adversary?
+When do route choices integrate into a conserved ledger, when do local defects turn into motion,
+what survives repeated loss, and how do local rules force global structure?
+
+This paper states thirteen candidate laws, G1--G13, one for each of these questions, and sorts
+them by what has actually been proved. Each entry has a general statement whose \emph{hard
+hypothesis} --- a coverage property, a closed family of states, a hierarchy of forced scales ---
+carries the difficult content. Seven entries are \emph{laws}: for each, the hard hypothesis is
+proved here for a concrete system, although for G13 that system is only a small arithmetic example.
+Two are \emph{general theorems}, whose hypotheses are ordinary data and whose classical instances
+are imported. Four are \emph{templates}: the implication is proved, but its hard hypothesis is not
+established in this paper for any system of interest and remains an open obligation. \Cref{tab:catalog} records the sorting, and
+separately what is checked in Lean.
+
+\subsection{A worked example: residues do not predict the Collatz ledger}\label{sec:intro-example}
+
+The accelerated Collatz map sends an odd number $n$ to $T(n) = (3n+1)/2^{a(n)}$, where $a(n)$ is
+the exponent of the largest power of $2$ dividing $3n+1$. Take $n = 5$ and $n = 9$. Both are
+congruent to $1$ modulo $4$, so they agree in their last two binary digits. But $3\cdot 5 + 1 =
+16$ gives $a(5) = 4$, while $3 \cdot 9 + 1 = 28$ gives $a(9) = 2$. Knowing $n$ modulo $4$ does not
+determine even the first division exponent.
+
+The same happens at every depth: for each $m \ge 1$ there are two odd numbers that agree modulo
+$2^m$ whose first division exponents are $m$ and at least $m+1$ (\Cref{thm:split-pair}). The pair
+above is the case $m = 2$. At the same time the bookkeeping of an orbit is exact. After $k$ steps,
+with $A_k$ the sum of the first $k$ exponents,
+\[
+  2^{A_k}\, n_k \;=\; 3^k\, n + B_k ,
+\]
+for an explicit integer $B_k$ determined by the exponents (\Cref{thm:affine-ledger}). The orbit has
+dropped below its start at step $k$ exactly when $2^{A_k} n > 3^k n + B_k$, an inequality between
+integers. Whether every orbit eventually satisfies it is the Collatz conjecture, which this paper
+does not settle. The two facts show where the difficulty lives: in an exact ledger whose next entry
+is not predicted by any fixed number of low-order digits.
+
+\subsection{Obstructions at every depth}\label{sec:intro-contribution}
+
+Two notions recur throughout the paper. A \emph{quotient} $q_m$ records what an observer sees at
+depth $m$, for example the last $m$ binary digits of a number, and a \emph{readout} $r$ records a
+future fact, for example the next division exponent. A \emph{split pair} for $q_m$ and $r$ is a pair
+of states with the same quotient and different readouts. If a split pair exists at every depth, no
+observer who looks at a fixed number of digits can predict the readout.
+
+The Collatz pairs above are such an obstruction for the last $m$ binary digits and the first
+division exponent. The orbits of $2^L - 1$ give a second one for the time of first descent: they lie
+in the residue class of $-1$ modulo $2^m$ once $L \ge m$, and they stay above their start for at
+least $L - 1$ steps (\Cref{rem:collatz-paper}). So no bound on the time of first descent can depend
+only on the residue of $n$ modulo a fixed power of $2$.
+
+Each entry of the catalog is stated in one form: the data of a run, a certificate in the run's own
+terms, and the named hypothesis that makes the certificate available. When that hypothesis is not
+yet proved for any system of interest, the entry is a \emph{template}, and its value is that it
+names the obligation precisely and lets it be recognized in unrelated systems. The split-pair
+condition above, for instance, is exactly what must be avoided by any proof that a fixed-depth
+reading decides a run; the same condition reappears for binary reverse-and-add, where a different
+tool, a family of states closed under the map and free of palindromes, settles one orbit
+(Result~B below).
+
+\subsection{Main results}\label{sec:intro-results}
+
+The following four results are proved in the text and checked in Lean. Their relation to the
+catalog differs.
+\begin{itemize}
+  \item Result~A (\Cref{sec:G1}) gives the certificate that G1 asks for, in exact integer form, and
+    shows that no fixed number of binary digits predicts it. It does not establish the hypotheses
+    of G1.
+  \item Result~B (\Cref{sec:G5}) establishes the hard hypothesis of G5 for one orbit.
+  \item Result~C (\Cref{sec:G10}) is a collapse example for G10. It shows that parity cannot be the
+    protected invariant for vectors of length $2^k$.
+  \item Result~D (\Cref{sec:G8}) is the general statement of G8, with two examples that separate
+    it from weaker properties.
+\end{itemize}
+
+\begin{headline}[A: the Collatz ledger and its split pairs]
+Every orbit of the accelerated Collatz map satisfies $2^{A_k} n_k = 3^k n_0 + B_k$ for every
+$k$. For every depth $m \ge 1$ there are odd positive $n_1 \equiv n_2 \pmod{2^m}$ whose first
+division exponents are at least $m+1$ and exactly $m$. Hence no fixed residue class modulo $2^m$
+determines the ledger (\Cref{thm:affine-ledger,thm:split-pair}).
+\end{headline}
+
+\begin{headline}[B: reverse-and-add in base 2]
+Under binary reverse-and-add, the orbit of $22 = 10110_2$ reaches a four-word family after four
+steps, cycles through its four phases with a parameter that grows by one per cycle, and never
+reaches a palindrome (\Cref{thm:four-phase,cor:orbit-22}).
+\end{headline}
+
+\begin{headline}[C: Ducci nilpotency]
+On cyclic binary vectors of length $2^k$, the map $x_i \mapsto x_i + x_{i+1}$ over
+$\mathbb{F}_2$ vanishes after $2^k$ steps (\Cref{thm:ducci}).
+\end{headline}
+
+\begin{headline}[D: abelian move systems]
+Consider a system of local moves in which any two distinct moves that are legal together remain
+legal after each other and commute. Start from a configuration that admits no infinite legal run.
+Then any two legal runs that end in stable configurations end in the same configuration, and they
+fire every site the same number of times (\Cref{thm:G8}). Two small examples show that a unique
+final configuration does not give canonical firing counts, and that termination does not give a
+unique final configuration (\Cref{ex:G8-b,ex:G8-d}).
+\end{headline}
+
+\subsection{What is imported, and what is not claimed}\label{sec:intro-claims}
+
+The deep theorems the catalog relies on are imported with attribution: Goodstein's theorem and the Kirby--Paris independence result, Dhar's abelian
+property and the least-action principle of Fey, Levine and Peres, the solution of the angel
+problem, the aperiodic tilings of Berger and Robinson, the de Bruijn--Erd\H{o}s compactness
+theorem, and the density theorems of Bourgain and Kontorovich together with the reciprocity
+obstruction of Haag, Kertzer, Rickards and Stange. The Collatz conjecture, the Erd\H{o}s--Straus
+conjecture, the base-10 Lychrel problem, Recam\'an's coverage question, the Langton's-ant highway
+conjecture, Gilbreath's conjecture and the chromatic number of the plane all remain open.
+
+\paragraph{Roadmap.} \Cref{sec:related} places the paper in the literature, and \Cref{sec:setting}
+fixes the vocabulary and gives the catalog. \Cref{sec:laws} treats the laws, \Cref{sec:theorems}
+the general theorems and \Cref{sec:templates} the templates; the four headline results appear in
+their entries. \Cref{sec:scope} lists inferences the results do not support,
+and \Cref{sec:lean} records what is formalized. The supplement holds the source concordance, the
+full register of non-implications, the case analyses and instance lists, the finite computations,
+the reading of three laws as asymptotic statuses, and the replay commands.

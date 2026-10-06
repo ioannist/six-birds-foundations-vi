@@ -1,0 +1,40 @@
+\section{Related work}\label{sec:related}
+
+\paragraph{The Six Birds series.} \FoundIV{} is the static catalog this paper extends. It presents
+fifty-two laws in a six-part form --- setting, statement, proof, case analysis, relation to the six
+structural roles, and limits --- each about fixed data \citep{Tsiokos2026FoundIV}. What separates each entry
+here from \FoundIV{} is a quantifier over an unbounded run, scale or orbit. \FoundV{} studies
+systems that carry out their own closure and repair \citep{FoundationsVCognition}; the laws here are
+certified from outside, by an analyst auditing a run, and no law credits a system with certifying
+itself. The quotient vocabulary of \Cref{sec:setting}, including split pairs and future-sufficient
+quotients, is taken from \FoundIV{} and from the paper on holonomy with memory
+\citep{Tsiokos2026Holonomy,Tsiokos2026Hiddenness}. Currencies as constraints, ledgers, potentials
+and shadow prices come from \citet{Tsiokos2026Currency}, obstructions that survive every native
+probe from \citet{Tsiokos2026NeedleKiller}, and the asymptotic statuses used in \Cref{supp:bridge}
+from the paper on audited operational realisability \citep{Tsiokos2026AOR}.
+
+\paragraph{Classical sources.} Each law with a classical core imports it. Termination by a
+decreasing assignment into a well-founded order is Floyd's method \citep{Floyd1967}; Goodstein's
+theorem and its unprovability in Peano arithmetic are due to \citet{Goodstein1944} and
+\citet{KirbyParis1982}. The potential method of amortized analysis is Tarjan's
+\citep{Tarjan1985,CormenEtAl}. The greedy expansion into unit fractions goes back to Fibonacci and
+\citet{Sylvester1880}. The base-2 reverse-and-add result is recorded in the OEIS and on MathPages
+\citep{OEIS-A060382,Brown-MathPages}; we know of no refereed proof, and the one in
+\Cref{sec:reverse-add} is self-contained. The angel problem was settled by
+\citet{Mathe2007}, \citet{Kloster2007}, \citet{Bowditch2007} and \citet{Gacs2007}. Order
+independence for sandpiles is Dhar's abelian property \citep{Dhar1990}, and the least-action
+principle is due to \citet{FeyLevinePeres2010}; abelian networks generalize both
+\citep{HolroydEtAl2008}. The traffic automaton rule~184 is analyzed by \citet{Fuks1997}. Ducci
+sequences are treated by \citet{ChamberlandThomas2004} and \citet{Breuer2007b}. Aperiodicity by
+hierarchical forcing is due to \citet{Berger1966} and \citet{Robinson1971}. The de
+Bruijn--Erd\H{o}s theorem is from \citet{BruijnErdos1951}, and the lower bound $5$ for the chromatic
+number of the plane from \citet{DeGrey2018}. Thin orbits are treated by \citet{BourgainFuchs2010} and
+\citet{BourgainKontorovich2014Apollonian}, and the reciprocity obstruction by \citet{HaagEtAl2024}.
+For the Collatz problem we rely on the surveys of \citet{Lagarias1985,Lagarias2010} and on
+\citet{Tao2019Collatz}.
+
+\paragraph{Sources of the laws.} Each law isolates the structure behind a problem with a small rule
+and a global obstruction: a tempting argument that relies on an auxiliary object, and the
+certificate in the original system that would make the argument valid. \Cref{supp:method} works
+this out for Collatz (G1) and sandpiles (G8) and records two related patterns that are not laws of
+this paper.

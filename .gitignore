@@ -1,0 +1,89 @@
+plan.md
+six-birds-papers
+lean/.lake/
+__pycache__/
+*.pyc
+.pytest_cache/
+six-birds-foundations-vi_v*.zip
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# --- Not part of the public release surface ---------------------------------
+# Internal agent operating model (playbook, driver, prompt templates).
+.codex/
+
+# Raw upstream brainstorm notes, superseded by design/ and THEOREMS.md.
+/ideas.md
+/collatz_idea.md
+
+# Zenodo submission config: names a credential file outside this repository.
+paper/submission/zenodo-config.json
+
+# Unused scaffolding from the paper-template layout (no figures or tables are
+# input by the manuscript) and superseded drafting notes.
+paper/figures/*_template.tex
+paper/tables/*_template.tex
+paper/notes/
+paper/submission/*-template.md
+paper/submission/*-template.json
+paper/external_citation_bibliography.md
+paper/notation_and_terminology.md
+
+# The built main and supplement PDFs are part of the release surface
+!paper/main.pdf
+!paper/supplement.pdf
+
+# Working design record, external-review requests, pre-ship audit and
+# rewrite plans (kept on disk)
+/design/
+/review_requests/
+/docs/PRESHIP_*.md
+/docs/READABILITY_*.md
+/scripts/make_review_zip.sh
+
+# Editor / OS noise
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Local secrets and credentials (keep only an explicit example file)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.netrc
+.pypirc
+credentials*.json
+*secret*
+*token*.txt
+
+# Local agent, prompt, transcript and session state (any depth)
+**/.agents/
+**/.codex/
+**/.claude/
+**/.cursor/
+**/.aider*
+**/.continue/
+**/.specstory/
+**/.windsurf/
+**/.codex_thread_id*
+/memory/
+/prompts/
+/skills/
+**/transcripts/
+**/rollout-*.jsonl
+**/*.transcript*
+**/CLAUDE.local.md
+**/.claude.json

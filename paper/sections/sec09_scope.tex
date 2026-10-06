@@ -1,0 +1,53 @@
+\section{What the laws do not give}\label{sec:scope}
+
+Each law is easy to read more strongly than it is stated. \Cref{tab:scope} lists the inferences we
+expect a reader to be tempted by, and what blocks each one. A complete register of non-implications,
+with a separating example for each, is in \Cref{supp:nonimpl}.
+
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{5.6cm}>{\raggedright\arraybackslash}p{8.6cm}@{}}
+\caption{Tempting inferences and what blocks them.}\label{tab:scope}\\
+\toprule
+\textbf{Tempting inference} & \textbf{Why it fails} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Tempting inference} & \textbf{Why it fails} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+The ghost-discharge template says something about the Collatz conjecture. & Both of its hypotheses
+are unproved for the Collatz map (\Cref{sec:G1}). The split pairs of \Cref{thm:split-pair} rule out
+fixed-depth prediction; they are not evidence about liveness. \\
+A decreasing escrow may decrease before or after a change of presentation. & The comparison must
+cover the step and the change of presentation together (\Cref{sec:G2}). \\
+A statistic that tracks cost is a potential. & Only a nonnegative potential entering the
+telescoping identity bounds cost (\Cref{thm:G3}). \\
+Covering every target so far shows the cover is exhaustive. & Exhaustion is the hypothesis of
+\Cref{thm:G4}; for Erd\H{o}s--Straus it is the open problem. \\
+A closed target-free family for base $2$ suggests one for $196$ in base $10$. & None is known, and
+the base-$2$ family was found by hand for one orbit (\Cref{sec:G5}). \\
+A long run without reaching $852655$ shows it is a permanent hole of Recam\'an's sequence. & A
+finite computation says nothing about later steps; Recam\'an's sequence is a candidate, not an
+instance (\Cref{sec:G6}). \\
+Return pressure exceeding obstruction growth forces coverage. & The implication from the rate
+conditions to the premises of \Cref{thm:G6} is open (\Cref{sec:G6}). \\
+The certificate theorem for the angel game finds winning strategies. & It checks given strategies
+(\Cref{thm:G7}); the thresholds are imported. \\
+Confluent move systems have route-independent counters. & \Cref{ex:G8-b} is confluent and its
+counter vectors differ. \\
+Any terminating move system has a unique final configuration. & \Cref{ex:G8-d} terminates without
+one. \\
+Visible motion of a pattern is transport. & Only a checked recurrence with displacement certifies
+it (\Cref{sec:G9}); Langton's ant is not an instance. \\
+Persistence for all iterates can be observed. & It must be proved from protection and regeneration
+(\Cref{thm:G10}); a finite run gives bounded evidence only. \\
+Local rules whose finite patches extend always force aperiodicity. & A hierarchy must be supplied
+(\Cref{thm:G11}), and whether a tile set tiles at all is undecidable. \\
+Every impossible global colouring has a finite witness. & Only under the compactness hypothesis
+(\Cref{prop:G12-compact}), which uses the axiom of choice. \\
+Passing every congruence condition means an integer occurs in the orbit. & Reciprocity
+obstructions are missed despite passing (\Cref{sec:G13}). \\
+\end{longtable}
+}

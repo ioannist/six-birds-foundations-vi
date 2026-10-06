@@ -1,0 +1,54 @@
+\section{Replay}
+\label{supp:replay}
+
+All commands run from the repository root.
+
+\paragraph{Lean library.}
+\begin{verbatim}
+cd lean
+lake build SixBirdsFoundationsVI
+\end{verbatim}
+The axiom transcript of the instance theorems in the concordance is reproduced by
+\begin{verbatim}
+cd lean
+lake env lean ../paper/supplement/instance_axioms.lean
+\end{verbatim}
+
+\paragraph{Finite computations and their tests.}
+\begin{verbatim}
+cd lab
+pip install -e '.[dev]'
+pytest tests
+python -m foundations_vi_lab.g01_solvency.run
+python -m foundations_vi_lab.g01_solvency.run_l2
+python -m foundations_vi_lab.g01_solvency.run_l3
+python -m foundations_vi_lab.g01_solvency.run_l4
+python -m foundations_vi_lab.g02_escrow.run
+python -m foundations_vi_lab.g03_currency.run
+python -m foundations_vi_lab.g04_exhaustion.run
+python -m foundations_vi_lab.g05_confinement.run
+python -m foundations_vi_lab.g06_needle.run
+python -m foundations_vi_lab.g06_needle.run_l2
+python -m foundations_vi_lab.g07_confinement.run
+python -m foundations_vi_lab.g08_odometer.run all
+python -m foundations_vi_lab.g09_transport.run
+python -m foundations_vi_lab.g10_persistence.run
+python -m foundations_vi_lab.g11_symmetry.run
+python -m foundations_vi_lab.g12_finite_witness.run
+python -m foundations_vi_lab.g13_saturation.run --bound 300000
+\end{verbatim}
+Each runner prints its parameters with \texttt{--help}; with the options shown, its defaults are the parameters of the runs
+in \Cref{supp:evidence}, which are also stored with each run's output. The option
+\texttt{--write-results} saves the output. The package depends on \texttt{python-sat} and
+\texttt{sympy}.
+
+\paragraph{Supplement tables and papers.}
+\begin{verbatim}
+python3 paper/supplement/build_supp.py
+cd paper
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build supplement.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=build main.tex
+\end{verbatim}
+The main paper and the supplement cite each other's numbered items, so the main paper is built a
+second time after the supplement.

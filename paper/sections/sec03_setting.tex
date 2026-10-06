@@ -1,0 +1,150 @@
+\section{Setting}\label{sec:setting}
+
+\paragraph{Runs.} A \emph{run} on a carrier $X$ is a sequence $x_0, x_1, x_2, \ldots$ with
+$x_{k+1} = T(x_k)$ for an update $T : X \to X$, or $x_{k+1} = T_k(x_k)$ when the update may change
+with the step. A set $A \subseteq X$ of terminal states is declared when the question is whether a
+run stops. The laws of this paper quantify over whole runs: over every step, every legal order of
+moves, every scale, or every orbit. That unbounded quantifier is what separates each law from its
+nearest relative in \FoundIV{}, whose laws are about fixed data.
+
+\paragraph{Quotients, descent and split pairs.} A \emph{quotient} is a map $q : X \to Q$ that
+records what an observer can see. A map $F$ observed through a readout $r$ \emph{descends} through
+$q$ when $r \circ F$ is a function of $q$, that is, when there is no \emph{split pair}: no $x, x'$
+with $q(x) = q(x')$ and $r(F(x)) \ne r(F(x'))$ \citep{Tsiokos2026FoundIV}. When a whole family of
+future readouts $r_j \circ F^{\,j}$ is considered, $q$ is \emph{future-sufficient} if every one of
+them descends. Several laws are step-indexed versions of this test: a fixed quotient that fails to
+be future-sufficient is exhibited by a split pair at some future step.
+
+\paragraph{Hard hypotheses.} Each entry G1--G13 has a general statement. Its \emph{hard
+hypothesis} is the hypothesis that carries the difficult content in applications --- a coverage
+property, a closed family of states, a hierarchy of forced scales --- as opposed to routine data
+such as a map or an order.
+
+\paragraph{Laws, general theorems and templates.} Each entry receives one of three statuses,
+decided by the mathematics.
+\begin{itemize}
+  \item A \emph{law} is a general statement together with a concrete system in which its hard
+    hypothesis is proved in this paper, so that the conclusion is established for that system.
+  \item A \emph{general theorem} is a statement whose hypotheses are ordinary data that can be
+    checked system by system; its classical instances rest on imported results.
+  \item A \emph{template} is an implication $H \Rightarrow C$ whose hard hypothesis $H$ is not
+    established for any system of interest. $H$ is the \emph{open obligation} of the template. A
+    template says nothing about a particular system until $H$ has been established for it.
+\end{itemize}
+A statement is a \emph{reformulation} when it is an equivalence obtained by unfolding definitions.
+Which statements are also checked in Lean is a separate question, recorded in the last column of
+\Cref{tab:catalog} and in \Cref{sec:lean}.
+
+\paragraph{Instances.} An instance of an entry is a concrete system with its data. An instance is
+proved here, imported from a cited theorem, or open.
+
+\paragraph{Certificates.} Several entries concern a statement about an extended or auxiliary object
+--- the $2$-adic integers, an ordinal, a potential --- that is used to settle a question about the
+original system. What may be concluded about the original system is a \emph{certificate}: a
+checkable statement in its own terms, such as an inequality between integers or the fact that a
+run has stopped. The auxiliary object itself is never treated as a state of the original system.
+
+\paragraph{The catalog at a glance.} \Cref{tab:catalog} lists the thirteen entries in the order in
+which they are treated. The first column names each entry with a one-line gloss and the section
+where it is treated. The second gives its status. The third names the instance proved in this
+paper for a law, and the open obligation of a template, with the principal instances otherwise.
+The fourth says what is checked in Lean. The full instance lists and case analyses are in
+\Cref{supp:laws}.
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.9cm}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{4.6cm}>{\raggedright\arraybackslash}p{4.4cm}@{}}
+\caption{The catalog.}\label{tab:catalog}\\
+\toprule
+\textbf{Entry} & \textbf{Status} & \textbf{Instance or open obligation} & \textbf{Checked in Lean} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Entry} & \textbf{Status} & \textbf{Instance or open obligation} & \textbf{Checked in Lean} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{4}{@{}l}{\emph{Laws} (\Cref{sec:laws})} \\*
+G3 \lawGThree: a potential bounds total cost over every finite stretch (\Cref{sec:G3}) & law &
+binary counter (\Cref{ex:G3-counter}); doubling array & telescoping identity and bound over
+integer costs; binary counter \\
+G4 \lawGFour: covers that change with the target close an infinite family (\Cref{sec:G4}) & law &
+initial intervals (\Cref{ex:G4-intervals}); greedy unit fractions; Erd\H{o}s--Straus open & general
+statement; initial intervals \\
+G5 \lawGFive: a closed family of states that avoids the target confines the run (\Cref{sec:G5}) &
+law & orbit of $22$ in base $2$ (\Cref{cor:orbit-22}); $196$ in base $10$ open; no-go template &
+confinement; four-phase family; orbit of $22$; no-go template \\
+G8 \lawGEight: commuting moves give an order-independent end state and firing counts
+(\Cref{sec:G8}) & law & sandpiles (\Cref{ex:G8-sandpile}) & order independence; the two separating
+examples; a three-site sandpile; not general graphs \\
+G10 \lawGTen: a relation survives every iterate of a lossy map if an invariant is regenerated
+(\Cref{sec:G10}) & law & checksum cascade (\Cref{ex:G10-checksum}); Ducci collapse; Gilbreath open &
+general statement; checksum cascade; Ducci over $\mathbb{F}_2$; integer Ducci for $n = 4$ \\
+G12 \lawGTwelve: a finite obstruction forbids a global colouring, and so do its images
+(\Cref{sec:G12}) & law & Moser spindle, $\chi(\mathbb{R}^2) \ge 4$ (\Cref{ex:G12-moser});
+$\chi(\mathbb{R}^2) \ge 5$ imported & general statement and the equivalence given compactness; the
+spindle graph has no $3$-colouring; not the plane embedding \\
+G13 \lawGThirteen: a sparse orbit misses only a density-zero part of a dense target
+(\Cref{sec:G13}) & law, weak instance & powers of two, an arithmetic example
+(\Cref{ex:G13-powers}); thin-orbit saturation a template & density lemma; powers of two \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{General theorems} (\Cref{sec:theorems})} \\*
+G2 \lawGTwo: a value in a well-founded order that falls at every step forces termination
+(\Cref{sec:G2}) & theorem & Goodstein sequences and Kirby--Paris (imported) & general statement,
+without extracting the terminal stage \\
+G7 \lawGSeven: escape and confinement strategies against an adversary (\Cref{sec:G7}) & theorem &
+the angel problem (imported) & general statement \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Templates} (\Cref{sec:templates})} \\*
+G1 \lawGOne: every nonterminal point eventually earns a certificate of descent (\Cref{sec:G1}) &
+template & (H1) and (H2) of \Cref{thm:G1b}; for Collatz both open & reformulation; template; Collatz
+ledger and split pairs \\
+G6 \lawGSix: obstructions made by the run's own history are covered or leave holes
+(\Cref{sec:G6}) & template & bridge from rate conditions to the premises of \Cref{thm:G6};
+Recam\'an open & the two final steps \\
+G9 \lawGNine: local defects resolve or turn into certified motion (\Cref{sec:G9}) & template & (H1)
+of \Cref{thm:G9}; evacuation of every low-density rule-184 ring & census bound; packaging step;
+rule-184 partial results, car conservation, evacuation for $n \le 8$ \\
+G11 \lawGEleven: local rules with a forced hierarchy exclude every period (\Cref{sec:G11}) &
+template & a hierarchy for a given tile set; Robinson and others (imported) & the implication \\
+\end{longtable}
+}
+
+\paragraph{Map of results.} \Cref{tab:map} lists the numbered results. Each is proved where it is stated.
+
+{\footnotesize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{11.3cm}@{}}
+\caption{Map of results.}\label{tab:map}\\
+\toprule
+\textbf{Result} & \textbf{What it establishes} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Result} & \textbf{What it establishes} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\Cref{thm:G3} & Total cost over a finite stretch equals amortized cost plus the drop in potential, so amortized costs at most $B$ give total cost at most $nB+\Phi(s_0)$. \\
+\Cref{thm:G4} & Patches that prove the target on their regions and cover every target prove it everywhere; under (H4) no finite list from the restricted class covers. \\
+\Cref{thm:G5} & A run that enters a closed pattern containing no target stays in it and never reaches a target. \\
+\Cref{thm:four-phase} & Binary reverse-and-add maps the four words $P_0(r),\dots,P_3(r)$ cyclically into the next family, and none is a palindrome. \\
+\Cref{cor:orbit-22} & The orbit of $22$ in base $2$ enters the four-phase family and never reaches a palindrome. \\
+\Cref{thm:G8} & If legal moves commute and no infinite legal run exists, all stabilizing runs end in the same configuration with the same counter vector. \\
+\Cref{thm:G10} & A relation carried through one lossy step by a regenerated invariant persists through every iterate. \\
+\Cref{thm:ducci} & Over $\mathbb F_2$ the Ducci map is nilpotent on words of length $2^k$. \\
+\Cref{thm:G12} & A finite witness rules out a $k$-colouring, and its image under any map preserving $E$ is again a witness. \\
+\Cref{prop:G12-compact} & Under compactness, no $k$-colouring exists exactly when a finite witness does. \\
+\Cref{thm:G13-density} & A density-zero set is density zero relative to any target of positive lower density. \\
+\Cref{thm:G2} & A value in a well-founded order that falls at every step outside the terminal set forces termination. \\
+\Cref{thm:G7} & An invariant set closed under the angel's strategy and every legal devil reply certifies escape; the dual certifies confinement. \\
+\Cref{thm:affine-ledger} & After $k$ odd steps of the accelerated Collatz map, $2^{A_k}n_k=3^kn+B_k$. \\
+\Cref{thm:split-pair} & For each $m$, two odd numbers congruent modulo $2^m$ have different division exponents. \\
+\Cref{cor:no-residue} & The division exponent is not a function of $n$ modulo $2^m$ for any $m$. \\
+\Cref{prop:G1} & The system is live exactly when no point lies in every bad tail $N_k$. \\
+\Cref{thm:G6} & Holes that are eventually reduced are eventually removed, and an unvisited point that stays unvisited is never visited. \\
+\Cref{thm:G9-census} & A nonincreasing count of unresolved defects is bounded. \\
+\Cref{prop:rule184} & Rule 184 keeps jam-free rings jam-free and conserves cars; on rings of $2$ to $8$ cells, every configuration with at most half the cells occupied is jam-free after $n$ steps. \\
+\end{longtable}
+}
+

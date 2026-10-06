@@ -1,0 +1,35 @@
+\section{Three entries read as asymptotic statuses}
+\label{supp:bridge}
+
+The paper on audited operational realisability names four statuses of a nonnegative sequence
+$c_0, c_1, \ldots$ \citep{Tsiokos2026AOR}: \emph{budgeted} ($c_j \le B$ for all large $j$),
+\emph{summable} ($\sum_j c_j < \infty$), \emph{contractive} (on the nonzero tail the ratios
+$c_{j+1}/c_j$ tend to a constant below $1$) and \emph{eventually zero}. Each implies the one before
+it. Only these facts about sequences are used here; nothing about that paper's other constructions
+is transferred.
+
+\begin{proposition}[The three currencies as statuses]\label{thm:currency-bridge}
+The following hold.
+\begin{enumerate}
+  \item In the setting of G1 (\Cref{sec:G1}), a point $x \notin A$ descends at some step exactly when the indicator
+    of $x \in N_j$ is eventually zero.
+  \item Under the hypotheses of \Cref{thm:G2}, the indicator that no stage up to $k$ is terminal is
+    eventually zero.
+  \item In the setting of G3 (\Cref{sec:G3}), write $H = \sum_{i < J} \widehat a_i$ for a head of the amortized
+    costs. If the amortized costs are budgeted by $B$ from $J$ on, then $\sum_{i \le n} a_i \le
+    \Phi(s_0) + H + B(n - J + 1)$ for $n \ge J$. If they are summable with sum $S$, then every
+    partial sum of actual costs is at most $S + \Phi(s_0)$. If they are contractive, choose $q < 1$
+    and $J$ with $\widehat a_{i+1} \le q\, \widehat a_i$ for all $i \ge J$; then the same holds with
+    $S$ replaced by $H + \widehat a_J/(1-q)$. If they vanish from
+    $J$ on, every partial sum is at most $\Phi(s_0) + H$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Part 1 restates \Cref{prop:G1} for one point, since the sets $N_j$ decrease. Part 2 follows from
+\Cref{thm:G2}, with the terminal stage obtained classically. Part 3 combines \Cref{thm:G3} with the
+standard bound matching each status.
+\end{proof}
+\origin{Elementary; argued on paper. The budgeted and eventually-zero cases of part 3 are readings
+of the integer statement checked in Lean; the summable and contractive cases need non-integer costs
+and are not formalized.}

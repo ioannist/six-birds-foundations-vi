@@ -1,0 +1,115 @@
+\section{Formal status}
+\label{supp:status}
+
+\subsection{The library}
+
+The Lean~4 library has thirteen modules for the entries G1--G13 and seven for the instances. It imports no external library, contains no \texttt{sorry} and declares no axioms of its
+own.
+
+\subsection{Axioms}
+
+\Cref{tab:axioms} gives, for every theorem named in \Cref{tab:concordance}, the axioms reported by
+\texttt{\#print axioms}. The records for the law modules are dated 2 September 2026. The records for the instance modules are dated 26 September 2026. Only the three
+standard axioms of Lean's kernel occur.
+
+{\scriptsize
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{8.6cm}>{\raggedright\arraybackslash}p{3.4cm}l@{}}
+\caption{Axioms of the theorems in the concordance.}\label{tab:axioms}\\
+\toprule
+\textbf{Declaration} & \textbf{Axioms} & \textbf{Record} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Declaration} & \textbf{Axioms} & \textbf{Record} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\input{supplement/axiom_rows}
+\end{longtable}
+}
+
+\subsection{What each Lean statement covers}
+
+\Cref{tab:clauses} records, for each law, which parts of the printed statement the Lean declarations
+establish and which are argued on paper or imported.
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{6.4cm}>{\raggedright\arraybackslash}p{7.0cm}@{}}
+\caption{Printed statements and their Lean coverage.}\label{tab:clauses}\\
+\toprule
+\textbf{Law} & \textbf{In Lean} & \textbf{On paper or imported} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Law} & \textbf{In Lean} & \textbf{On paper or imported} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+G1 & the reformulation; ghost discharge with both hypotheses; the Collatz ledger and split pairs,
+with the map defined on all natural numbers & the $2$-adic completion and the ghost; oddness of the
+split pairs; the $2^L - 1$ family; the cycle condition \\
+G2 & no run is nonterminal at every step, in the native form comparing $T_k(x_k)$ with $x_k$ & the
+printed conclusion that some $x_k$ lies in $A$ (classical extraction); Goodstein sequences; Kirby--Paris \\
+G3 & identity and bounds over integer costs; the binary counter & rational costs; the doubling
+array \\
+G4 & the three statements of \Cref{thm:G4}; exhaustion and the finite leak for initial intervals & greedy unit fractions; Erd\H{o}s--Straus results \\
+G5 & the no-go template; confinement; the four-phase family and the orbit of $22$ & the
+unbounded-horizon hypothesis for base $2$ \\
+G6 & covering from ``a positive hole count later decreases''; hole formation from one-step
+propagation of non-visitation & the bridge from rate inequalities (open); windows and blocks; the
+designed variants \\
+G7 & the three parts, confinement in rank form; exclusion given a state in the escape invariant &
+other confinement arguments; the angel thresholds \\
+G8 & order independence of stable legal runs from a start with no infinite legal run; the two
+examples; the narrower least-action statement; the three-site sandpile & the least-action principle;
+sandpiles on arbitrary connected graphs \\
+G9 & the census bound for a sequence of natural numbers, in the form that the count is not
+unbounded on every tail; packaging of a supplied transporter record
+with one assigned defect; the rule-184 partial results of \Cref{prop:rule184}, including car conservation and evacuation
+for $n \le 8$ & the evacuation template beyond packaging; evacuation for every low-density ring (open); the defect ledger; the absorption
+hypothesis; the recurrence equality; rule~184 \\
+G10 & the persistence theorem; the checksum cascade; Ducci nilpotency over $\mathbb{F}_2$; the
+integer Ducci collapse for $n = 4$ & the integer collapse for other powers of two; Gilbreath \\
+G11 & aperiodicity from the hierarchy and forced breaks, with admissibility and ``breaks $p$'' as
+arbitrary predicates & finiteness of the regions $R_p$; the tile
+sets \\
+G12 & restriction; orbit radiation; the equivalence for one $k$ under the compactness hypothesis &
+the compactness theorem; the plane embedding of the Moser spindle, whose colouring obstruction is
+checked; the Hadwiger--Nelson witnesses \\
+G13 & the relative-density theorem, conditional on its two count hypotheses, with $o(\cdot)$
+written as ``for every $j$, eventually $j$ times the count is at most'' and $c$ rational; the powers of two as
+an infinite missed family of density zero & the exponent bound; the application to a thick target;
+the reciprocity obstruction; all saturation theorems \\
+Bridge & the underlying theorems for parts 1 and 2 and for the budgeted and eventually-zero cases
+of part 3 & the status readings; the summable and contractive cases \\
+\end{longtable}
+}
+
+\subsection{Hypotheses carried but not used}
+
+\Cref{tab:unused} lists the hypotheses that appear in a Lean statement and are not used by its
+proof.
+
+{\small
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{7.6cm}>{\raggedright\arraybackslash}p{6.4cm}@{}}
+\caption{Unused hypotheses.}\label{tab:unused}\\
+\toprule
+\textbf{Declaration} & \textbf{Unused hypothesis} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Declaration} & \textbf{Unused hypothesis} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\path{Laws.G10LossfulPersistence.boundary_persistence} & the map is not injective \\
+\path{Laws.G11GlobalAntiSymmetry.hierarchy_forces_aperiodic} & the zero period acts as the
+identity \\
+\path{Laws.G3AmortizedCurrency.telescoping_bound}, \path{Laws.G3AmortizedCurrency.uniform_actual_cost_bound} & actual costs are nonnegative \\
+\path{Laws.G8OdometerAbelianization.least_action} & abelian compatibility; stability of the final
+configuration of the run whose counters are bounded \\
+\end{longtable}
+}

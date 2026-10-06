@@ -1,0 +1,111 @@
+\section{Non-implications}
+\label{supp:nonimpl}
+
+\Cref{tab:nonimpl} lists, law by law, statements that do not follow from what the main paper
+proves, with the example or reason that separates them. It extends \Cref{tab:scope} of the main
+paper.
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{6.0cm}>{\raggedright\arraybackslash}p{7.4cm}@{}}
+\caption{Non-implications.}\label{tab:nonimpl}\\
+\toprule
+\textbf{Law} & \textbf{Does not follow} & \textbf{Separating example or reason} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Law} & \textbf{Does not follow} & \textbf{Separating example or reason} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+G1 & Liveness of the Collatz map & Both hypotheses of \Cref{thm:G1b} are unproved for it. \\
+ & A bound on the first descent time uniform in $n$ & $2^L - 1$ stays above its start for $L - 1$
+ steps (\Cref{rem:collatz-paper}). \\
+ & Prediction of $a(n)$ from $n \bmod 2^m$ & \Cref{thm:split-pair}. \\
+ & Pointwise liveness from almost-all results & Tao's theorem \citep{Tao2019Collatz} concerns
+ almost all starts and bounds values, not descent of every orbit. \\
+ & A statement about integers from one about the ghost & The ghost $-1$ is a $2$-adic point, not an
+ integer orbit; only integer inequalities are certificates. \\
+\midrule
+G2 & Termination provable in a given theory & Goodstein termination is not provable in Peano
+ arithmetic \citep{KirbyParis1982}. \\
+ & Descent that ignores the change of presentation & In Goodstein sequences the integer value grows
+ while the ordinal falls; comparing values in different presentations proves nothing. \\
+\midrule
+G3 & Eventual success & \Cref{thm:G3} bounds cost over every finite stretch and says nothing about
+ termination. \\
+ & A potential from a correlated statistic & Only a nonnegative potential in the telescoping
+ identity gives the bound. \\
+\midrule
+G4 & Exhaustion from covering every checked target & Exhaustion is a hypothesis of
+ \Cref{thm:G4}; Erd\H{o}s--Straus is verified far beyond any bound without a proof. \\
+ & Pointwise closure from density results & The results of \citet{Vaughan1970,ElsholtzTao2013}
+ bound the exceptions without excluding them. \\
+ & A fixed package for Erd\H{o}s--Straus & No finite family of polynomial identities covers the
+ classes that are squares modulo every prime \citep{Mordell1969}. \\
+\midrule
+G5 & Escape to non-palindromes without a closed family & The confinement theorem needs a closed
+ target-free family; none is known for $196$ in base $10$. \\
+ & The unbounded-horizon hypothesis for base $2$ & Not proved here; the confinement of $22$ does
+ not use it. \\
+\midrule
+G6 & Coverage or a permanent hole from rate conditions & The bridge from rate conditions to the
+ premises of \Cref{thm:G6} is open. \\
+ & A permanent hole from a long computation & $852655$ is missing from every computed prefix;
+ this is not a proof. \\
+ & Either half of G6 for Recam\'an's sequence & The premises of \Cref{thm:G6} have not been established for it. \\
+ & The system certifying itself & The obstruction is produced by the run and audited from outside. \\
+\midrule
+G7 & Winning strategies from \Cref{thm:G7} & The theorem checks given strategies. \\
+ & Exclusion of the two certificates with an empty invariant & An empty set satisfies the escape
+ hypothesis vacuously; part~3 needs a state in it. \\
+ & Infinite-board results from finite tori & A finite torus changes the game. \\
+ & Thresholds independent of the rules & The angel results depend on the metric, the power and the
+ number of deletions per turn. \\
+\midrule
+G8 & Route-independent counters from confluence & \Cref{ex:G8-b}. \\
+ & The Lean statement without termination & The Lean theorem assumes that no infinite legal run
+ starts at $x$. \\
+ & Uniqueness of final configurations from termination & \Cref{ex:G8-d}. \\
+ & The least-action principle from \Cref{thm:G8} & It compares with scripts that need not be
+ legal runs; it is imported \citep{FeyLevinePeres2010}. \\
+ & An arrow of time or entropy production & Nothing in G8 or G9 concerns thermodynamics. \\
+\midrule
+G9 & Evacuation for rule~184 at every low density & Not proved; the partial results are \Cref{prop:rule184}. \\
+ & The evacuation template in Lean & Lean only repackages a supplied certified
+ transporter with one assigned defect. \\
+ & Transport from visible motion & Only the recurrence equality certifies it. \\
+ & The highway of Langton's ant & Open; only unboundedness is proved
+ \citep{BunimovichTroubetzkoy1992}. \\
+ & Transport from the census bound alone & \Cref{thm:G9-census} excludes unbounded creation; it
+ produces no transporter. \\
+\midrule
+G10 & Recovery of lost information & The theorem preserves the boundary relation; the interior is
+ lost (checksum). \\
+ & Persistence from observation & A finite run gives bounded evidence (Gilbreath). \\
+ & Persistence resting on parity for length $2^k$ & \Cref{thm:ducci} destroys parity. \\
+\midrule
+G11 & Aperiodicity from local rules alone & A hierarchy must be supplied. \\
+ & An algorithm classifying tile sets & Undecidable \citep{Berger1966}. \\
+ & Existence of an admissible configuration & A separate input to \Cref{thm:G11}. \\
+ & That a material is an instance & A precise local-rule model is required first. \\
+\midrule
+G12 & Completeness of finite witnesses without compactness & \Cref{prop:G12-compact} assumes it. \\
+ & The exact chromatic number of the plane & Open; $5 \le \chi(\mathbb{R}^2) \le 7$. \\
+ & A proof-checked certificate for every witness & The $826$-vertex graph of
+ \Cref{supp:evidence} has none. \\
+\midrule
+G13 & A thin-orbit result from \Cref{ex:G13-powers} & The example is arithmetic; it involves no
+ group, orbit or spectral gap. \\
+ & Local-to-global from congruence conditions & False for many packings
+ \citep{HaagEtAl2024}. \\
+ & Density one from positive density & \citet{BourgainFuchs2010} alone gives positive density. \\
+ & ``Thin'' or ``thick'' in any informal sense & Both are technical: infinite index and Zariski
+ dense; positive density. \\
+\midrule
+All & Progress on any open problem named here & None is claimed. \\
+ & Novelty of imported results & They are cited with attribution. \\
+ & Transfer of constructions from the paper on audited operational realisability & Only four
+ statuses of sequences are used (\Cref{thm:currency-bridge}). \\
+\end{longtable}
+}

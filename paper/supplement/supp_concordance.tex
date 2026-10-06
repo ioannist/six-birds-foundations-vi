@@ -1,0 +1,43 @@
+\section{Source concordance}
+\label{supp:concordance}
+
+\Cref{tab:concordance} lists every numbered result of the main paper with its law, its part of the
+law, the line of the theorem catalog where that law's statement begins, and its Lean declarations
+with their kind, file and line. Declaration names omit the common prefix of the library. Items argued on paper only are marked as such.
+\Cref{tab:catalog-index} gives, for each law, the status recorded in the catalog and the status
+under which the main paper states it; where they differ, the main paper's reading is the one
+supported by the Lean statement.
+
+{\scriptsize
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{10.4cm}@{}}
+\caption{Source concordance.}\label{tab:concordance}\\
+\toprule
+\textbf{Item} & \textbf{Law and part} & \textbf{Lean declarations} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Item} & \textbf{Law and part} & \textbf{Lean declarations} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\input{supplement/concordance_rows}
+\end{longtable}
+}
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{4.4cm}>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{3.8cm}r@{}}
+\caption{Catalog status and the status used in the main paper.}\label{tab:catalog-index}\\
+\toprule
+\textbf{Law} & \textbf{Catalog name} & \textbf{Catalog status} & \textbf{Main paper} & \textbf{Line} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Law} & \textbf{Catalog name} & \textbf{Catalog status} & \textbf{Main paper} & \textbf{Line} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\input{supplement/catalog_rows}
+\end{longtable}
+}

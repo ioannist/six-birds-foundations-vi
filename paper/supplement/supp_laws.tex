@@ -1,0 +1,199 @@
+\section{Case analyses and instances}
+\label{supp:laws}
+
+\subsection{Case analyses}
+
+For each law, the table lists the principal cases a system can fall into and what settles a system
+in each case. Only the cases for G1 are exhaustive; for the other laws a system may fall outside
+every listed case, and then nothing in this paper applies to it. A case in which nothing has been proved is recorded as
+undetermined, never as a failure of the law.
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{5.7cm}>{\raggedright\arraybackslash}p{7.5cm}@{}}
+\caption{Case analyses.}\label{tab:cases}\\
+\toprule
+\textbf{Law} & \textbf{Case} & \textbf{Settled by} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Law} & \textbf{Case} & \textbf{Settled by} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+G1 & (a) terminal, or descends at step $1$ & membership in $A$, or the one-step ledger inequality \\
+ & (b) first descends at a step $k > 1$ & the ledger inequality at step $k$; by
+ \Cref{rem:collatz-paper}, $k$ is unbounded for Collatz \\
+ & (c) never descends & a point in every $N_k$; for Collatz, this is the open case \\
+\midrule
+G2 & (a) escrow in $\mathbb{N}$ & a ranking function \\
+ & (b) escrow in a finite lexicographic product & a lexicographic ranking \\
+ & (c) escrow in a larger ordinal & a stage-coherent ordinal assignment (Goodstein) \\
+ & (d) no escrow of a declared strength & an independence result (Kirby--Paris for Peano
+ arithmetic) \\
+\midrule
+G3 & (a) potential never increases & the telescoping bound \\
+ & (b) potential increases at some steps, amortized cost bounded & \Cref{thm:G3} (binary counter,
+ dynamic array) \\
+ & (c) no potential from a declared class bounds the cost & a lower bound for the class \\
+\midrule
+G4 & (a) a sound exhaustive cover exists & \Cref{thm:G4} (initial intervals; greedy unit fractions) \\
+ & (b) a fixed finite package covers & a finite list of patches \\
+ & (c) a leak for the restricted class & (H4) of \Cref{thm:G4} (Mordell's quadratic-residue
+ obstruction) \\
+ & (d) undetermined & open (Erd\H{o}s--Straus) \\
+\midrule
+G5 & (a) confined by a closed target-free family & \Cref{thm:G5} (orbit of $22$) \\
+ & (b) reaches a target & a finite computation \\
+ & (c) no fixed depth predicts & split pairs at every depth, \Cref{thm:G5-nogo} \\
+ & (d) undetermined & open ($196$ in base $10$) \\
+\midrule
+G6 & (a) covering & a hole count that always later decreases (unit-jump variant) \\
+ & (b) permanent hole & non-visitation that propagates (jumps $2n$) \\
+ & (c) undetermined & open (Recam\'an's sequence) \\
+\midrule
+G7 & (a) escape & an escape strategy with invariant (angel of power $2$) \\
+ & (b) confinement & a rank-decreasing devil strategy \\
+ & (c) undetermined & neither certificate supplied \\
+\midrule
+G8 & (a) abelian, no infinite legal run & \Cref{thm:G8}; odometer \\
+ & (b) one final configuration, counters depend on the route & \Cref{ex:G8-b} \\
+ & (c) some legal run is infinite & an infinite run; no odometer \\
+ & (d) terminating, several final configurations & \Cref{ex:G8-d} \\
+ & (e) terminating, not abelian, one final configuration and the same counters on all maximal
+ runs & direct computation; for example, maximal runs $rst$ and $srt$ from $S$ with
+ $m_s m_r(S) \ne m_r m_s(S)$, both sent by $t$ to one stable configuration \\
+\midrule
+G9 & (a) all defects eventually resolved & a census with empty persistent set \\
+ & (b) certified transport & transporter records with checked recurrences (rule~184) \\
+ & (c) defects persist without motion & stationary composites \\
+ & (d) unbounded unresolved creation & excluded by \Cref{thm:G9-census} under a census \\
+ & (e) undetermined & a finite census only \\
+\midrule
+G10 & (a) persistence proved & protection, regeneration, initial invariant (checksum) \\
+ & (b) collapse & a nilpotency certificate (Ducci, length $2^k$) \\
+ & (c) persistence seen up to a finite depth & a computation; no claim beyond it
+ (Gilbreath) \\
+\midrule
+G11 & (a) a periodic admissible configuration & a period and a fundamental domain \\
+ & (b) admissible configurations exist, all aperiodic & existence plus \Cref{thm:G11} (Robinson) \\
+ & (c) no admissible configuration & a finite region that cannot be filled \\
+ & & no algorithm decides among (a)--(c) \citep{Berger1966} \\
+\midrule
+G12 & (a) a valid finite witness & \Cref{thm:G12} (Moser spindle; de~Grey's graph) \\
+ & (b) the proposed witness fails & a colouring, a wrong edge, or unrealizable coordinates \\
+ & (c) the claim depends on choice & \Cref{prop:G12-compact}, with the axiom recorded \\
+\midrule
+G13 & (a) finitely many exceptions & an imported finite-exception theorem \\
+ & (b) density one with exceptions & \Cref{thm:G13} (Bourgain--Kontorovich) \\
+ & (c) positive density only & Bourgain--Fuchs \\
+ & & exceptions are further sorted into congruence failures, reciprocity obstructions
+ \citep{HaagEtAl2024} and uncertified cases \\
+\end{longtable}
+}
+
+\subsection{Instances}
+
+\Cref{tab:instances} lists five or six systems for each entry. The grades are those of the main paper:
+\emph{checked} (proved in the main paper and in Lean), \emph{written} (proved in the main paper
+only), \emph{imported} (a cited
+theorem), \emph{open} (the question is unsolved), and \emph{analogy}: the system has the shape of
+the law, but its hypotheses have not been checked for a precise model, and nothing is claimed about
+it.
+
+{\small
+\begin{longtable}{@{}l>{\raggedright\arraybackslash}p{6.2cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{4.3cm}@{}}
+\caption{Instances by law.}\label{tab:instances}\\
+\toprule
+\textbf{Law} & \textbf{System} & \textbf{Grade} & \textbf{Sources} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Law} & \textbf{System} & \textbf{Grade} & \textbf{Sources} \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+G1 & Collatz: ledger and split pairs; liveness & checked; open & \citet{Lagarias1985,Lagarias2010,Tao2019Collatz} \\
+ & Binary-counter increments & written & \citet{Tarjan1985,CormenEtAl} \\
+ & Size-change termination & imported & \citet{LeeJonesBenAmram2001} \\
+ & Aliquot sequences & open & \citet{GuySelfridge1975,GuyUnsolved} \\
+ & Switched and probabilistic termination & analogy & \citet{Liberzon2003,AgrawalChatterjeeNovotny2017} \\
+\midrule
+G2 & Goodstein sequences and hydra games & written; imported & \citet{Goodstein1944,KirbyParis1982} \\
+ & Ranking functions & imported & \citet{Floyd1967} \\
+ & Termination by path orderings & imported & \citet{Dershowitz1982} \\
+ & Ordinal analysis & analogy & \citet{Gentzen1936} \\
+ & Multiset orderings; cascade termination & imported & \citet{DershowitzManna1979,Tsiokos2026AOR} \\
+\midrule
+G3 & Binary counter & written & \Cref{ex:G3-counter}; \citet{Tarjan1985,CormenEtAl} \\
+ & Doubling array & written & \citet{CormenEtAl} \\
+ & Splay trees & imported & \citet{SleatorTarjan1985} \\
+ & Storage functions of passive systems & analogy & \citet{Willems1972,Tsiokos2026EmergenceCalculus} \\
+ & Energy-harvesting budgets & analogy & \citet{OzelEtAl,YangUlukus} \\
+\midrule
+G4 & Initial intervals of $\mathbb{N}$ & checked & \Cref{ex:G4-intervals} \\
+ & Greedy unit fractions & written & \citet{Fibonacci,Sylvester1880,Eppstein1995} \\
+ & Erd\H{o}s--Straus & open & \citet{Mordell1969,ElsholtzTao2013} \\
+ & Covering systems & imported & \citet{Hough2015} \\
+ & Symbolic integration & analogy & \citet{Risch1969,Bronstein2005} \\
+ & Counterexample-guided abstraction refinement & analogy & \citet{ClarkeEtAl2003} \\
+\midrule
+G5 & Reverse-and-add in base $2$, orbit of $22$ & checked & \citet{OEIS-A060382,Brown-MathPages} \\
+ & Lychrel candidates in base $10$ & open & \citet{Walker-Fourmilab} \\
+ & Carry-dependent timing & analogy & \citet{Kocher1996} \\
+ & Rounding-error propagation & analogy & \citet{Higham2002} \\
+ & Automatic sequences & analogy & \citet{AlloucheShallit2003} \\
+\midrule
+G6 & Recam\'an's sequence & open; proposed audit & \citet{OEIS-A005132,OEIS-A057167} \\
+ & Two designed variants & written & \Cref{sec:G6} \\
+ & Self-avoiding walks & analogy & \citet{MadrasSlade1993,Flory1953} \\
+ & Novelty-seeking exploration & analogy & \citet{BellemareEtAl2016} \\
+ & Online algorithms with irrevocable choices & analogy & \citet{BorodinElYaniv1998,BoyarEtAl} \\
+\midrule
+G7 & Angel game & imported & \citet{BerlekampConwayGuy1982,Conway1996,Mathe2007,Kloster2007,Bowditch2007,Gacs2007} \\
+ & Cops and robbers & analogy & \citet{NowakowskiWinkler1983,AignerFromme1984} \\
+ & Routing under adversarial failures & analogy & \citet{BorodinEtAl2001} \\
+ & Navigation in supercritical percolation & analogy & \citet{Grimmett1999,Kesten1982} \\
+ & Motion planning among moving obstacles & analogy & \citet{LaValle2006,FraichardAsama2004} \\
+\midrule
+G8 & Sandpiles & written & \Cref{ex:G8-sandpile} \\
+ & Rotor-routing and the least-action principle & imported & \citet{Dhar1990,FeyLevinePeres2010,HolroydEtAl2008} \\
+ & Confluence with counters in rewriting & analogy & \citet{Tsiokos2026Rewriting} \\
+ & Load balancing and gossip averaging & analogy & \citet{Cybenko1989,BoydEtAl2006} \\
+ & Neuronal avalanches & analogy & \citet{BeggsPlenz2003} \\
+ & Clearing in payment systems & analogy & \citet{EisenbergNoe2001} \\
+\midrule
+G9 & Rule~184 & imported; partial results checked & \citet{Fuks1997,Nagel1996,ChowdhurySantenSchadschneider2000} \\
+ & Langton's ant & open & \citet{Langton1986,BunimovichTroubetzkoy1992} \\
+ & Excitable media & analogy & \citet{Greenberg1978,DurrettGriffeath} \\
+ & Gliders in cellular automata & analogy & \citet{Gardner1970,Pivato} \\
+ & Traffic shock waves & analogy & \citet{LighthillWhitham1955,Richards1956,Daganzo1994} \\
+\midrule
+G10 & Checksum cascade & checked & \citet{Fletcher1982,StoneEtAl1998} \\
+ & Ducci maps of length $2^k$ & checked ($\mathbb{F}_2$); written (integers) & \citet{ChamberlandThomas2004,Breuer2007a,Breuer2007b} \\
+ & Gilbreath's conjecture & open & \citet{Odlyzko1993,Chase2020,Plouffe2025} \\
+ & Boundary conditions of difference schemes & analogy & \citet{Strikwerda,GustafssonKreissOliger,CoulombelFaye} \\
+ & Edges under smoothing & analogy & \citet{Canny1986,Witkin1983} \\
+\midrule
+G11 & Aperiodic tile sets & imported & \citet{Berger1966,Robinson1971,Penrose1974,SmithEtAl2023Hat,SmithEtAl2023Spectre} \\
+ & Quasicrystals & analogy & \citet{ShechtmanEtAl1984,Senechal1995} \\
+ & Subshifts of finite type & imported & \citet{LindMarcus1995,DurandRomashchenkoShen} \\
+ & Constraint satisfaction & analogy & \citet{Dechter2003} \\
+ & Synchronization strings & analogy & \citet{HaeuplerShahrasbi2017} \\
+\midrule
+G12 & Moser spindle, $\chi(\mathbb{R}^2) \ge 4$ & written & \Cref{ex:G12-moser} \\
+ & $\chi(\mathbb{R}^2) \ge 5$ & imported & \citet{DeGrey2018,Heule2018,Parts2020,BruijnErdos1951} \\
+ & Hardness gadgets & analogy & \citet{GareyJohnsonStockmeyer1976} \\
+ & Rigidity & analogy & \citet{Laman1970,AsimowRoth1978} \\
+ & Excluded minors & analogy & \citet{RobertsonSeymour2004} \\
+ & Impossibility theorems in social choice & analogy & \citet{Gibbard1973,Satterthwaite1975} \\
+\midrule
+G13 & Powers of two (arithmetic example) & checked & \Cref{ex:G13-powers} \\
+ & Apollonian packings & imported & \citet{BourgainFuchs2010,BourgainKontorovich2014Apollonian,HaagEtAl2024} \\
+ & Zaremba's conjecture & imported (density one); open & \citet{BourgainKontorovich2014Zaremba} \\
+ & Affine sieve & analogy & \citet{KontorovichOh2012} \\
+ & Expander graphs & analogy & \citet{HooryLinialWigderson2006} \\
+ & Diffraction of model sets & analogy & \citet{BaakeGrimm2013} \\
+\end{longtable}
+}

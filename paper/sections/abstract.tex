@@ -1,0 +1,15 @@
+A static structural law classifies fixed data. Many questions about dynamics concern runs
+instead: whether every orbit eventually descends, whether a run terminates while its
+presentation changes, whether a cover must move with its target. This paper states thirteen
+candidate laws of this kind and sorts them by what is proved. Seven are laws, each with a concrete
+system in which the difficult hypothesis is proved (for one of them only a small arithmetic
+example); two are general theorems with imported classical instances; four are templates, whose
+implication is proved while the difficult hypothesis remains an open obligation. Lean coverage is reported separately. The concrete results below are
+all checked in Lean. For the accelerated Collatz map every orbit satisfies an exact affine ledger, and at every depth $m$ two starting values agree modulo $2^m$ but
+have different next division exponents, so no fixed residue class predicts the ledger. Under binary
+reverse-and-add, the orbit of $22$ enters a four-phase family and never reaches a palindrome. The
+Ducci map on binary vectors of length $2^k$ is nilpotent. For move systems whose distinct legal
+moves commute, started where no infinite legal run exists, any two legal runs that end in stable
+states end in the same state with the same firing counts. Classical results are imported with
+attribution, nothing is labelled new, and the Collatz, Erd\H{o}s--Straus, Lychrel and Recam\'an
+problems remain open.

@@ -1,0 +1,36 @@
+{
+  "artifact": {
+    "bytes": 777636,
+    "filename": "Tsiokos_2026_Six_Birds_Foundations_VI_A_Catalog_of_Dynamical_Structural_Laws.pdf",
+    "pages": 63,
+    "path": "paper/submission/artifacts/Tsiokos_2026_Six_Birds_Foundations_VI_A_Catalog_of_Dynamical_Structural_Laws.pdf",
+    "sha256": "a0c7c58ebe307f5866dd4cc87ff23f12ddefde3ce5763b03885c420742dc525a",
+    "validated_values": {
+      "copyright": "© 2026",
+      "license": "CC-BY 4.0",
+      "paper version": "Preprint v1.0",
+      "publication date": "2 September 2026",
+      "reserved DOI": "10.5281/zenodo.22254289"
+    }
+  },
+  "dashboard_url": "https://zenodo.org/deposit/22254289",
+  "deposition_id": 22254289,
+  "failures": [
+    "dashboard Copyright must be exactly '(C) 2026 Automorph Inc.'"
+  ],
+  "github": {
+    "url": "https://github.com/ioannist/six-birds-foundations-vi",
+    "visibility": "PRIVATE"
+  },
+  "manual_dashboard_publication_only": true,
+  "metadata_sha256": "aa6e4a2850831359550c6c5e2b35e66bd78ac99b52f68bf550e1e910ccfa01e9",
+  "owner_action": "Review this draft in the Zenodo dashboard and publish it manually the same day.",
+  "publication_date": "2026-09-02",
+  "remote_metadata_sha256": "96ed62d9ef980ad7576edbeee718bdcd0916a35391feaded02219beba859a982",
+  "remote_pdf_md5": "11a88ba987093a6f9684133cc6295d79",
+  "reserved_doi": "10.5281/zenodo.22254289",
+  "result": "fail",
+  "schema_version": 1,
+  "source_git_commit": "53604ec2a9d41ff0c322b04ccbe4e8219272b95d",
+  "validated_at_utc": "2026-09-02T12:16:07.684870+00:00"
+}

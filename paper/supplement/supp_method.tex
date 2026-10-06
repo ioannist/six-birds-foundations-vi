@@ -1,0 +1,32 @@
+\section{Where the laws come from}
+\label{supp:method}
+
+Each law isolates the structure behind a problem that is easy to state and resists proof in a
+characteristic way: Collatz, Goodstein, Erd\H{o}s--Straus, Lychrel, Recam\'an, the angel problem,
+sandpiles, Langton's ant, Ducci, Gilbreath, aperiodic tilings, Hadwiger--Nelson and Apollonian
+packings. In each there is a tempting argument that fails; it relies on an auxiliary object --- a
+measure on a completion, a fixed finite package, an ordinal --- that is not part of the original
+system; and there is a certificate in the original system's own terms that would make the argument
+valid. Each law differs from the laws of \citet{Tsiokos2026FoundIV} by a quantifier over an
+unbounded run, scale or orbit.
+
+\paragraph{Collatz and G1.} The tempting argument is negative drift: on average the division
+exponent is $2$, so $\log n$ changes by $\log 3 - 2\log 2 < 0$ per step. This controls typical
+behaviour at best, and the conjecture concerns every orbit. The auxiliary object is the $2$-adic
+completion, on which the exponent statistics are exact and which contains non-descending points
+such as $-1$. The certificate is the integer inequality $2^{A_k} n > 3^k n + B_k$ for some $k$, and
+G1 asks for such a certificate at every nonterminal point. Binary counters and size-change
+termination are solved relatives; aliquot sequences are an open one.
+
+\paragraph{Sandpiles and G8.} The tempting argument is that the order of topplings ``obviously''
+does not matter; the auxiliary object is the final configuration, presumed unique before any
+hypothesis is named; the certificate is the vector of toppling counts. Abelian compatibility is the
+hypothesis that makes the argument valid (\Cref{thm:G8}), and \Cref{ex:G8-b} shows that confluence
+alone does not give canonical counts. Rotor-routing is a solved relative.
+
+\paragraph{Two related patterns that are not laws of this paper.} Somos sequences divide at every
+step yet stay integral, because each term is a Laurent polynomial in a cluster-algebra structure; a
+non-descending auxiliary object whose selected consequence does descend is already a pattern of
+\citet{Tsiokos2026FoundIV}. Conway's look-and-say sequence eventually splits into a fixed finite set
+of elements; here the auxiliary object is a description of the system by itself, which falls within
+the self-reference studied in \citet{FoundationsVCognition}.

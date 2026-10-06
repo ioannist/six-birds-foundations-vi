@@ -1,0 +1,23 @@
+\section{Formalization}\label{sec:lean}
+
+\paragraph{What is checked.} The general statements of all thirteen entries are checked in Lean~4
+\citep{DeMouraUllrich2021}, in a library with no external dependencies, together with the Collatz
+ledger and split pairs (\Cref{thm:affine-ledger,thm:split-pair}), the four-phase family and the
+orbit of $22$ (\Cref{thm:four-phase,cor:orbit-22}), Ducci nilpotency (\Cref{thm:ducci}), the two
+separating examples for G8, and the instances in \Cref{ex:G4-intervals,ex:G10-checksum,ex:G13-powers}
+and \Cref{prop:rule184}, the binary counter of \Cref{ex:G3-counter}, a three-site sandpile, the
+colouring obstruction of the Moser spindle and the integer Ducci bound for $n = 4$. The last column of
+\Cref{tab:catalog} says, entry by entry, what is covered; sandpiles on arbitrary graphs, the
+plane embedding of the Moser spindle, the other remarks and the imported results are proved on paper
+only. Some Lean statements are formally weaker than the printed ones, for
+example \Cref{thm:G2} without the extraction of a terminal stage, and some carry a hypothesis they
+do not use; both are listed in \Cref{supp:status}.
+
+\paragraph{Axioms.} The library builds without \texttt{sorry} or added axioms and uses at most the
+standard axioms \texttt{propext}, \texttt{Quot.sound} and \texttt{Classical.choice}.
+
+\paragraph{Where to look.} Following \citet{Pollack1998}, what a reader must trust is the kernel and
+the statements. \Cref{supp:concordance} maps every numbered result of this paper to its Lean
+declarations, file and line; \Cref{supp:status} gives the axioms of each declaration and a
+clause-by-clause comparison with the printed statements; \Cref{supp:replay} gives the commands that
+rebuild the library.

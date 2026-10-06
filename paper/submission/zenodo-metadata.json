@@ -1,0 +1,282 @@
+{
+  "metadata": {
+    "access_right": "open",
+    "creators": [
+      {
+        "affiliation": "Automorph Inc.",
+        "name": "Tsiokos, Ioannis",
+        "orcid": "0009-0009-7659-5964"
+      }
+    ],
+    "custom": {
+      "code:codeRepository": "https://github.com/ioannist/six-birds-foundations-vi",
+      "code:programmingLanguage": [
+        {
+          "id": "lean",
+          "title": {
+            "en": "Lean"
+          }
+        },
+        {
+          "id": "python",
+          "title": {
+            "en": "Python"
+          }
+        },
+        {
+          "id": "tex",
+          "title": {
+            "en": "TeX"
+          }
+        }
+      ]
+    },
+    "description": "<p>The Six Birds corpus through Foundations IV certifies <em>states</em>: each of its laws fixes a single map, quotient, package, or declared finite family and proves a static classification about it. Nothing in the corpus certifies <em>runs</em>: liveness, amortized or transfinite cost over unbounded time, covers that must move with their targets, obstructions that grow, react, or are manufactured by the system's own history, route defects that integrate into potentials, transport that emerges from substrate dynamics, or content that persists through repeated loss. This paper is the catalog of exactly those laws: thirteen dynamical structural laws (G1–G13) in four clusters, each stated in the six-part normal form inherited from Foundations IV and each carrying an unbounded quantifier — temporal in most laws, scale-indexed in G11, orbit-radiating in G12, asymptotic in G13 — that no static row possesses.</p>\n\n<p>The laws were mined from eccentric mathematical problems — Collatz, Goodstein, Egyptian fractions, reverse-and-add, Recamán, the angel problem, sandpiles, rule 184, Ducci, aperiodic tilings, Hadwiger–Nelson, Apollonian packings — treated as theorem detectors: each problem's folklore almost-proof names a promoted object, the object's lawful descended certificate fixes a boundary expression, and the residual surviving comparison against every existing law is the law seed.</p>\n\n<p>The contributions are separated by provenance, and every result carries its provenance line in the text. What is <em>recovered standard</em> is the classical mathematics anchoring the laws that have such a component (the potential method, well-founded ranking, Goodstein's theorem with the Kirby–Paris price, the angel-problem threshold, Dhar's abelian property and the Fey–Levine–Peres least-action principle, Robinson's hierarchical forcing, de Bruijn–Erdős compactness, the Apollonian density and reciprocity theorems), cited at each result and never restated as this paper's; what is <em>recovered SBT</em> is the corpus apparatus and each law's nearest Foundations IV cousin, cited by identifier and differently scoped in every case. What is <em>sharpened</em> is the layer-agnostic normal form of each law: named hypotheses, typed records, minimized falsifiers, and two scope repairs (legal-versus-legal least action; explicit devil legality). Nothing is labelled <em>new</em>: the two candidate schemas (G1's ghost discharge, G6's covering and hole-forming) are sharpened typed records with elementary proofs, and the mining protocol is offered as a procedure without a result label.</p>\n\n<p>The abstract core of every law is mechanized in Mathlib-free Lean 4 with per-declaration kernel-axiom receipts, and the appendix records clause by clause which parts of each printed statement the Lean covers; six laws are full theorem-grade rows, one splits into an unconditional theorem and a schema, three are schema-grade with named boxed hypotheses, and three are calibration-anchored schemas discharged end-to-end by solved classical instances. The paper solves no open problem and claims none: Collatz, Erdős–Straus, Lychrel, Recamán, the Langton's-ant highway, Gilbreath, and the exact chromatic number of the plane all remain open, and each law's nonclaims say so explicitly.</p>",
+    "imprint_publisher": "Zenodo",
+    "keywords": [
+      "dynamical structural law",
+      "liveness",
+      "amortized currency",
+      "moving-cover exhaustion",
+      "adversarial confinement",
+      "endogenous obstruction",
+      "defect-to-transport certification",
+      "finite witness radiation",
+      "layer-agnostic normal form",
+      "Six Birds theory",
+      "emergence calculus"
+    ],
+    "language": "eng",
+    "license": "cc-by-4.0",
+    "prereserve_doi": {
+      "doi": "10.5281/zenodo.22254289",
+      "recid": 22254289
+    },
+    "publication_date": "2026-09-02",
+    "publication_type": "preprint",
+    "related_identifiers": [
+      {
+        "identifier": "10.2307/2322189",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1017/fmp.2022.8",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1145/3158122",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1016/0304-3975(82)90026-3",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/BF01565428",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1145/359138.359142",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1137/0606031",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/BF00276493",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1145/876638.876643",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "https://oeis.org/A060382",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://www.mathpages.com/home/kmath004/kmath004.htm",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://www.fourmilab.ch/documents/threeyears/",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://oeis.org/A005132",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "https://oeis.org/A057167",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.1016/0012-365X(83)90160-7",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1016/0166-218X(84)90073-8",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1163/1568553042674662",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1103/PhysRevLett.64.1613",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/s10955-009-9899-6",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1109/TIT.2006.874516",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1016/j.tcs.2007.03.014",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1287/opre.4.1.42",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1080/10236190410001647807",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/s00208-023-02579-w",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1093/imanum/drab088",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1109/TPAMI.1986.4767851",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/BF01418780",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.5070/C64163843",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.5070/C64264241",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.19086/aic.18614",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1103/PhysRevLett.53.1951",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1016/0304-3975(76)90059-1",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1007/BF01534980",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1016/j.jctb.2004.08.001",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.1090/S0894-0347-2011-00707-8",
+        "relation": "cites",
+        "resource_type": "publication-article"
+      },
+      {
+        "identifier": "10.5281/zenodo.20713187",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.20713664",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.18365949",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.19061345",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.19672278",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.20712761",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.18926771",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.20713688",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      },
+      {
+        "identifier": "10.5281/zenodo.20713577",
+        "relation": "cites",
+        "resource_type": "publication-preprint"
+      }
+    ],
+    "title": "Six Birds Foundations VI: A Catalog of Dynamical Structural Laws",
+    "upload_type": "publication"
+  }
+}

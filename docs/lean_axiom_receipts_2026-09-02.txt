@@ -1,0 +1,99 @@
+# Fresh `#print axioms` transcript, 2026-09-02, run on a scratch copy of lean/ at HEAD d188961 (lake build: 76 jobs, clean).
+# Names abbreviated: prefix SixBirdsFoundationsVI.Laws. stripped. Three "Unknown constant" lines are artifacts of the name-extraction script (`exactly`, `header` are prose words matched by the grep; `image_mem_map` is a private lemma) and are not declarations.
+
+'G10LossfulPersistence.boundary_persistence' depends on axioms: [propext]
+'G10LossfulPersistence.checksum_lossful' does not depend on any axioms
+'G10LossfulPersistence.checksum_protect' depends on axioms: [propext]
+'G10LossfulPersistence.checksum_regen' depends on axioms: [propext]
+'G10LossfulPersistence.checksum_boundary_persistence' depends on axioms: [propext]
+'G11GlobalAntiSymmetry.admissible_configurations_exist' does not depend on any axioms
+'G11GlobalAntiSymmetry.hierarchy_forces_aperiodic' does not depend on any axioms
+'G11GlobalAntiSymmetry.g11_global_anti_symmetry' does not depend on any axioms
+'G12FiniteWitnessRadiation.no_global_k_coloring' does not depend on any axioms
+AxiomAudit.lean:11:14: error(lean.unknownIdentifier): Unknown constant `G12FiniteWitnessRadiation.image_mem_map`
+'G12FiniteWitnessRadiation.orbit_radiation' does not depend on any axioms
+'G12FiniteWitnessRadiation.finite_witness_iff_no_global_coloring' does not depend on any axioms
+'G13ThinOrbitSaturation.relative_density_theorem' depends on axioms: [propext]
+'G13ThinOrbitSaturation.reciprocity_compatibility_observation' does not depend on any axioms
+'G1HiddenAmortizedSolvency.part_a_reduction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'G1HiddenAmortizedSolvency.part_b_discharge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'G2TransfiniteEscrow.no_descending_chain_from_acc' does not depend on any axioms
+'G2TransfiniteEscrow.wellFounded_no_descending_chain' does not depend on any axioms
+'G2TransfiniteEscrow.no_infinite_nonterminal_run' does not depend on any axioms
+'G2TransfiniteEscrow.not_nonterminal_of_stage_coherence' does not depend on any axioms
+'G3AmortizedCurrency.telescoping_identity' depends on axioms: [propext, Quot.sound]
+'G3AmortizedCurrency.telescoping_bound' depends on axioms: [propext, Quot.sound]
+'G3AmortizedCurrency.amortized_sum_le_scale' depends on axioms: [propext, Quot.sound]
+'G3AmortizedCurrency.uniform_actual_cost_bound' depends on axioms: [propext, Quot.sound]
+'G4MovingCoverExhaustion.positive_schema' does not depend on any axioms
+'G4MovingCoverExhaustion.conditional_biconditional' does not depend on any axioms
+'G4MovingCoverExhaustion.fixed_package_no_go' does not depend on any axioms
+'G5CarryHorizonConfinement.no_fixed_depth_future_sufficient' does not depend on any axioms
+'G5CarryHorizonConfinement.no_future_sufficient_depth' does not depend on any axioms
+AxiomAudit.lean:31:14: error(lean.unknownIdentifier): Unknown constant `G5CarryHorizonConfinement.exactly`
+'G5CarryHorizonConfinement.iterate_add' depends on axioms: [propext]
+'G5CarryHorizonConfinement.closed_pattern_persists' does not depend on any axioms
+'G5CarryHorizonConfinement.closed_pattern_confinement' depends on axioms: [propext]
+'G6EndogenousNeedleGeneration.covering_schema' does not depend on any axioms
+'G6EndogenousNeedleGeneration.hole_forming_schema' does not depend on any axioms
+'G7AdversarialMobilityConfinement.escape_never_stuck' does not depend on any axioms
+'G7AdversarialMobilityConfinement.play_succ_from_initial' depends on axioms: [propext]
+'G7AdversarialMobilityConfinement.confinement_forces_trap_with_fuel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'G7AdversarialMobilityConfinement.confinement_forces_trap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'G7AdversarialMobilityConfinement.no_infinite_nat_descent' depends on axioms: [propext]
+'G7AdversarialMobilityConfinement.escape_confinement_mutually_exclusive' depends on axioms: [propext]
+'G8OdometerAbelianization.stable_legal_run_empty' does not depend on any axioms
+'G8OdometerAbelianization.runCounter_cons_congr' depends on axioms: [propext]
+'G8OdometerAbelianization.extract_first_move' depends on axioms: [propext, Quot.sound]
+'G8OdometerAbelianization.partA_order_independent_and_odometer' depends on axioms: [propext,
+ Quot.sound]
+'G8OdometerAbelianization.order_independent_stabilization' depends on axioms: [propext,
+ Quot.sound]
+'G8OdometerAbelianization.odometer_invariance' depends on axioms: [propext, Quot.sound]
+'G8OdometerAbelianization.legalRun_snoc' does not depend on any axioms
+'G8OdometerAbelianization.runCounter_append_single' depends on axioms: [propext, Quot.sound]
+'G8OdometerAbelianization.prefixBounded_snoc' depends on axioms: [propext, Quot.sound]
+'G8OdometerAbelianization.legalRun_counts_bounded_from_prefix' depends on axioms: [propext,
+ Quot.sound]
+AxiomAudit.lean:53:14: error(lean.unknownIdentifier): Unknown constant `G8OdometerAbelianization.header`
+'G8OdometerAbelianization.least_action' depends on axioms: [propext, Quot.sound]
+'G8OdometerAbelianization.caseB_not_abelian' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_stable_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_no_legal_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_stable_run_from_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_after_A_move_ends_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_stable_run_from_A' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_after_B_move_ends_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_stable_run_from_B' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_after_S_move_ends_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_stable_run_from_S_ends_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_terminates_from_N' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_terminates_from_A' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_terminates_from_B' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_terminates_from_S' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_run_rp' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_run_rt' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_run_sq' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_confluent_runs_share_final' depends on axioms: [propext]
+'G8OdometerAbelianization.caseB_counter_rp_s_zero' does not depend on any axioms
+'G8OdometerAbelianization.caseB_counter_sq_s_one' does not depend on any axioms
+'G8OdometerAbelianization.caseB_route_dependent_counter' does not depend on any axioms
+'G8OdometerAbelianization.caseD_stable_A' depends on axioms: [propext]
+'G8OdometerAbelianization.caseD_stable_B' depends on axioms: [propext]
+'G8OdometerAbelianization.caseD_terminates_from_S' depends on axioms: [propext]
+'G8OdometerAbelianization.caseD_run_r' depends on axioms: [propext]
+'G8OdometerAbelianization.caseD_run_s' depends on axioms: [propext]
+'G8OdometerAbelianization.caseD_final_states_distinct' does not depend on any axioms
+'G8OdometerAbelianization.caseD_nonconfluent_witness' depends on axioms: [propext]
+'G9DefectEvacuationTransport.census_bound_from_start' depends on axioms: [propext]
+'G9DefectEvacuationTransport.census_tail_bound' depends on axioms: [propext]
+'G9DefectEvacuationTransport.census_excludes_unbounded_creation' depends on axioms: [propext]
+'G9DefectEvacuationTransport.certified_transport_regime_of_assigned_nonzero' does not depend on any axioms

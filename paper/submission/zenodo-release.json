@@ -1,0 +1,401 @@
+{
+  "artifact": {
+    "bytes": 777636,
+    "filename": "Tsiokos_2026_Six_Birds_Foundations_VI_A_Catalog_of_Dynamical_Structural_Laws.pdf",
+    "pages": 63,
+    "path": "paper/submission/artifacts/Tsiokos_2026_Six_Birds_Foundations_VI_A_Catalog_of_Dynamical_Structural_Laws.pdf",
+    "sha256": "a0c7c58ebe307f5866dd4cc87ff23f12ddefde3ce5763b03885c420742dc525a",
+    "source_git_commit": "340361b9a7ce5f20a23c9dc8e9364028f0e08356",
+    "validated_values": {
+      "copyright": "© 2026",
+      "license": "CC-BY 4.0",
+      "paper version": "Preprint v1.0",
+      "publication date": "2 September 2026",
+      "reserved DOI": "10.5281/zenodo.22254289"
+    }
+  },
+  "assembled_at_utc": "2026-09-02T12:14:04.436166+00:00",
+  "dashboard_url": "https://zenodo.org/deposit/22254289",
+  "deposition_id": 22254289,
+  "doi_reservation": {
+    "method": "POST /api/records/22254289/draft/pids/doi (InvenioRDM endpoint)",
+    "note": "The legacy deposit API's prereserve_doi value was only Zenodo's predicted DOI; the RDM pids table was empty until this call. Identifier unchanged: 10.5281/zenodo.22254289 (matches the printed PDF).",
+    "reserved_at_utc": "2026-09-02T12:3xZ"
+  },
+  "draft_source": "created",
+  "manual_dashboard_publication_only": true,
+  "metadata": {
+    "citation_count": 44,
+    "path": "paper/submission/zenodo-metadata.json",
+    "sha256": "aa6e4a2850831359550c6c5e2b35e66bd78ac99b52f68bf550e1e910ccfa01e9",
+    "skipped_citations": [
+      {
+        "bib_key": "Lagarias2010",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "GuySelfridge1975",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "GuyUnsolved",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Liberzon2003",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "LeeJonesBenAmram2001",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Goodstein1944",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "KirbyParis1982",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Floyd1967",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "CormenEtAl",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "SleatorTarjan1985",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "OzelEtAl",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "YangUlukus",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Fibonacci",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Sylvester1880",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Eppstein1995",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Mordell1969",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "ElsholtzTao2013",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Vaughan1970",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Hough2015",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Risch1969",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Bronstein2005",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Kocher1996",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Higham2002",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "AlloucheShallit2003",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "MadrasSlade1993",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Flory1953",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BellemareEtAl2016",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BorodinElYaniv1998",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BoyarEtAl",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "MianChowla1944",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Rolnick",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BerlekampConwayGuy1982",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Conway1996",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Bowditch2007",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Mathe2007",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Kloster2007",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Gacs2007",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BorodinEtAl2001",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Grimmett1999",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Kesten1982",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "LaValle2006",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "HolroydEtAl2008",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "EisenbergNoe2001",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Cybenko1989",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BeggsPlenz2003",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Fuks1997",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Nagel1996",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "ChowdhurySantenSchadschneider2000",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Langton1986",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BunimovichTroubetzkoy1992",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Greenberg1978",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "DurrettGriffeath",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Gardner1970",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "LighthillWhitham1955",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Daganzo1994",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Breuer2007a",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Breuer2007b",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Odlyzko1993",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Plouffe2025",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Strikwerda",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "GustafssonKreissOliger",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Witkin1983",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Fletcher1982",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "StoneEtAl1998",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Berger1966",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Penrose1974",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Senechal1995",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "LindMarcus1995",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "DurandRomashchenkoShen",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Dechter2003",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "HaeuplerShahrasbi2017",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "DeGrey2018",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Heule2018",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Parts2020",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BruijnErdos1951",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "ShelahSoifer2003",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Falconer1981",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "AsimowRoth1978",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Gibbard1973",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Satterthwaite1975",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BourgainKontorovich2014Apollonian",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "HaagEtAl2024",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BourgainKontorovich2014Zaremba",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "KontorovichOh2012",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "HooryLinialWigderson2006",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "BaakeGrimm2013",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "FoundationsVCognition",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Tsiokos2026FoundIII",
+        "reason": "no supported identifier field"
+      },
+      {
+        "bib_key": "Tsiokos2026Holonomy",
+        "reason": "no supported identifier field"
+      }
+    ]
+  },
+  "paper_release_include": "paper/includes/release_metadata.tex",
+  "publication_date": "2026-09-02",
+  "remote_metadata": {
+    "desired_sha256": "aa6e4a2850831359550c6c5e2b35e66bd78ac99b52f68bf550e1e910ccfa01e9",
+    "modified": "2026-09-02T12:14:13.024319+00:00",
+    "sha256": "96ed62d9ef980ad7576edbeee718bdcd0916a35391feaded02219beba859a982"
+  },
+  "reserved_doi": "10.5281/zenodo.22254289",
+  "schema_version": 1,
+  "stage": "draft_validation_failed",
+  "validation_receipt": "paper/submission/receipts/draft-validation.json"
+}

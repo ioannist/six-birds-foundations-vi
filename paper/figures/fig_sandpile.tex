@@ -1,0 +1,42 @@
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, site/.style={circle,draw,fill=white,minimum size=8mm,inner sep=0pt,font=\small}]
+  \begin{scope}
+    \coordinate (a) at (0,1.65);
+    \coordinate (b) at (-1.55,-0.85);
+    \coordinate (c) at (1.55,-0.85);
+    \coordinate (s) at (0,-0.05);
+    \draw[gray] (a)--(b)--(c)--(a) (a)--(s) (b)--(s) (c)--(s);
+    \draw[->,line width=0.7pt,shorten <=12pt,shorten >=12pt] (a)--(b);
+    \draw[->,line width=0.7pt,shorten <=12pt,shorten >=12pt] (a)--(c);
+    \draw[->,line width=0.7pt,shorten <=12pt,shorten >=12pt] (a)--(s);
+    \node[site,fill=gray!25] at (a) {3};
+    \node[site] at (b) {0};
+    \node[site] at (c) {0};
+    \node[site,fill=gray!12] at (s) {$s$};
+    \node[font=\footnotesize,above=15pt] at (a) {$v_1$};
+    \node[font=\footnotesize,below left=13pt] at (b) {$v_2$};
+    \node[font=\footnotesize,below right=13pt] at (c) {$v_3$};
+    \node[font=\small] at (0,3) {before};
+  \end{scope}
+  \draw[->,line width=0.7pt] (2.3,0.35)--(3.5,0.35)
+    node[midway,above,font=\footnotesize] {topple $v_1$};
+  \begin{scope}[xshift=5.8cm]
+    \coordinate (aa) at (0,1.65);
+    \coordinate (bb) at (-1.55,-0.85);
+    \coordinate (cc) at (1.55,-0.85);
+    \coordinate (ss) at (0,-0.05);
+    \draw[gray] (aa)--(bb)--(cc)--(aa) (aa)--(ss) (bb)--(ss) (cc)--(ss);
+    \node[site] at (aa) {0};
+    \node[site,fill=gray!12] at (bb) {1};
+    \node[site,fill=gray!12] at (cc) {1};
+    \node[site,fill=gray!12] at (ss) {$s$};
+    \node[font=\footnotesize,above=15pt] at (aa) {$v_1$};
+    \node[font=\footnotesize,below left=13pt] at (bb) {$v_2$};
+    \node[font=\footnotesize,below right=13pt] at (cc) {$v_3$};
+    \node[font=\small] at (0,3) {after};
+  \end{scope}
+\end{tikzpicture}
+\caption{One toppling on the three-site graph: $(3,0,0)\to(0,1,1)$. The arrows show one chip sent along each edge from $v_1$, including the edge to the sink $s$.}
+\label{fig:sandpile}
+\end{figure}
